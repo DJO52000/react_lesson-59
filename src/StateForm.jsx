@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { checkEmail, checkPassword } from "./validators"
 
 export function StateForm() {
     const [email, setEmail] = useState("")
@@ -9,6 +10,16 @@ export function StateForm() {
 
     function onSubmit(e) {
         e.preventDefault()
+
+        const emailValidator =checkEmail(email)
+        const passwordValidator =checkPassword(password)
+
+        setEmailErrors(emailValidator)
+        setPasswordErrors(passwordValidator)
+
+        if (emailValidator.length === 0 && passwordValidator.length === 0) {
+            alert("Success")
+        }
     }
 
     return (
