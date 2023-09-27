@@ -1,12 +1,12 @@
-// import { StateForm } from './StateForm'
-import { RefForm } from './RefForm'
+import { StateForm } from './StateForm'
+// import { RefForm } from './RefForm'
 // import './App.css'
 
 function App() {
 
   return (
-    // <StateForm />
-    <RefForm />
+    <StateForm />
+    // <RefForm />
   )
 }
 
